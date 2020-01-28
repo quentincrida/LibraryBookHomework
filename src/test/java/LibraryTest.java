@@ -13,12 +13,14 @@ public class LibraryTest {
     private Library library;
     private Book book1;
     private Book book2;
+    private Book book3;
 
     @Before
     public void before() {
         library = new Library(2);
         book1 = new Book("Hell", "Stephen King", "Horror");
         book2 = new Book("Hill", "Steven Kong", "Leisure");
+        book3 = new Book("The Body", "Bill Bryson", "non fiction");
     }
 
    @Test
@@ -36,5 +38,14 @@ public class LibraryTest {
         //library.newBook(book2);
         assertEquals(1, library.stockCount());
     }
+    @Test
+    public void checkStockBeforeAdding(Book book){
+        library.newBook(book1);
+        library.newBook(book2);
+        library.newBook(book3);
+        assertEquals(2, library.checkStockBeforeAddingBook());
+    }
+
+
 }
 
