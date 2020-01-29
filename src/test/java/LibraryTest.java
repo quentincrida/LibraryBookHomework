@@ -38,14 +38,14 @@ public class LibraryTest {
         //library.newBook(book2);
         assertEquals(1, library.stockCount());
     }
-    @Test
-    public void checkStockBeforeAdding(Book book){
-        library.newBook(book1);
-        library.newBook(book2);
-        library.newBook(book3);
-        assertEquals(2, library.checkStockBeforeAddingBook());
+//    @Test
+//    public void checkStockBeforeAdding(Book book){
+//        library.newBook(book1);
+//        library.newBook(book2);
+//        library.newBook(book3);
+//        assertEquals(2, library.checkStockBeforeAddingBook());
     }
 
 
-}
+
 

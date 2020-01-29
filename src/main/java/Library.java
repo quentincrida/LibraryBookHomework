@@ -21,12 +21,13 @@ public class Library {
     //public void checkStockBeforeAddingBook(Book book) {
       //  if (this.stockCount() < this.capacity) {
         //    this.stock.add(book);
-        }//
+        //}
 
 
-    public int checkStockBeforeAddingBook(Book book) {
+    public void checkStockBeforeAddingBook(Book book) {
         if (this.stockCount() < this.capacity) {
             this.stock.add(book);
         }
+       // return this.stockCount() +1;
     }
 }
