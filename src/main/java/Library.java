@@ -15,19 +15,11 @@ public class Library {
     }
 
     public void newBook(Book book) {
-        this.stock.add(book);
+        if(canAddBook()){
+        this.stock.add(book);}
     }
 
-    //public void checkStockBeforeAddingBook(Book book) {
-      //  if (this.stockCount() < this.capacity) {
-        //    this.stock.add(book);
-        //}
-
-
-    public void checkStockBeforeAddingBook(Book book) {
-        if (this.stockCount() < this.capacity) {
-            this.stock.add(book);
-        }
-       // return this.stockCount() +1;
+    public boolean canAddBook() {
+        return this.capacity > this.stock.size();
     }
 }
